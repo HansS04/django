@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block header %}
+    {% include "page/header.html" %}
+{% endblock %}
+{% block navbar %}
+    {% include "page/navbar.html" %}
+{% endblock %}
+{% block content %}
+
+
+ <h2 class="text-center nadpis" >Pokoj č: {{ room_detail.pk}}</h2>
+ <div class="row mb-3">
+ <div class="col-sm-5">
+   <img style="width:80%; margin-left:60px" src="{{ room_detail.foto.url }}" alt="{{ room_detail.foto.url}}" >
+
+ </div>
+ <div style="border-left:2px solid black" class="col-sm-2 text-center nad">
+  <h3 class="mt-5">Ceník</h3>
+  <p style="font-size:20px"><b>Cena</b> student: {{room_detail.cenik_pokoje.cena_dospeli}}</p>
+  <p style="font-size:20px"><b>Cena</b> student: {{room_detail.cenik_pokoje.cena_student}}</p>
+  <p style="font-size:20px"><b>Cena</b> student: {{room_detail.cenik_pokoje.cena_dite}}</p>
+  <p style="font-size:20px"><b>Cena</b> student: {{room_detail.cenik_pokoje.cena_duchodce}}</p>
+
+ </div>
+<div style="border-left:2px solid black; border-right:2px solid black" class="col-sm-4 text-center">
+  <h3 class="text-center ">Vybavení pokoje</h3>
+  <p style="font-size:20px " class="mt-5"><b>STANDARD:</b> {{room_detail.vybaveni_pokoje.standard}}</p>
+   <p style="font-size:20px"><b>POČET JEDNOLŮŽEK:</b> {{room_detail.vybaveni_pokoje.jednoluzka}}</p>
+  <p style="font-size:20px"><b>POČET DVOJLŮŽEK</b> {{room_detail.vybaveni_pokoje.dvojluzka}}</p>
+  <p style="font-size:20px"><b>BALKON</b>: {{room_detail.vybaveni_pokoje.balkon}}</p>
+
+ </div>
+
+</div>
+<div class="row mt-5 mb-3">
+ <div class="col-lg-6 mb-3">
+  {% endblock %}
+  {% block footer %}
+    {% include "page/footer.html" %}
+  {% endblock %}

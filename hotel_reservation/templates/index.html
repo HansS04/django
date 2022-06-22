@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block header %}
+    {% include "page/header.html" %}
+{% endblock %}
+{% block navbar %}
+    {% include "page/navbar.html" %}
+{% endblock %}
+{% block content %}
+<div class="row mt-3 mb-3 p-3">
+    <div class="col-sm-12">
+        <h2 class="text-center nadpis text-dark" id="id">Pokoje seřazeny dle poschodí</h2>
+    </div>
+</div>
+<div class="row">
+    {% for pokoj in pokoje %}
+
+        <div class="col-sm-3">
+            <div class="card p-0">
+                <div class="card-body p-10" >
+
+                    <img class="card-img-top" src="{{ pokoj.foto.url }}" alt="{{ pokoj.foto.url}}" >
+
+                    <h3>Pokoj č:{{ pokoj.pk }}</h3>
+                    <h5>Poschodí č:{{pokoj.poschodi}}</h5>
+                    <a href= "{% url "room_detail" pokoj.pk %}" class="btn btn-primary">Podrobnosti</a>
+
+                </div>
+            </div>
+       </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block footer %}
+    {% include "page/footer.html" %}
+{% endblock %}

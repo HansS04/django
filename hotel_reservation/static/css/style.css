@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.headd{
+    padding: 15%;
+    color:white;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+header{
+    background-image: url("../images/leto.webp");
+    background-size: 100%;
+
+}
+.icona{
+    width: 5%;
+
+}
+.item-nav{
+    color: rgb(255, 255, 255) !important;
+    font-weight: 600;
+}
+nav{
+    background-color: rgba(12, 137, 187, 0.918);
+}
+.obrazek{
+    width: 2px;
+}
+.nadpis{
+    font-size: 45px;
+    border-bottom: 1px solid black;
+    padding: 50px;
+    margin-top: 50px;
+    color: black;
+}
+.nad{
+    text-align:centre!important;
+    font-family: 'Josefin Sans';
+    background-color: rgba(231, 250, 255, 0.767);
+    
+}
+
